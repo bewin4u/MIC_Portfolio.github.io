@@ -123,7 +123,7 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
               >
                 <img 
-                  src="https://github.com/bewin4u/MIC_Portfolio.github.io/blob/641733ad58a03b9dd6fbe14a0ba68de88c8dca19/hero.jpg?raw=true"
+                  src="https://github.com/bewin4u/MIC_Portfolio.github.io/blob/fd08f6636a3af7f87583a5128605179e5cfd2c8a/hero.jpg?raw=true"
                   alt="Michael David Robinston"
                   className="w-full h-full object-cover filter hover:brightness-110 transition-all duration-700"
                 />
