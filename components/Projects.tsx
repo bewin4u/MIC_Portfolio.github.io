@@ -5,10 +5,10 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 const Projects: React.FC = () => {
   return (
-    <section className="bg-dark py-24">
+    <section id="projects" className="bg-dark py-24 scroll-mt-16">
       <div className="container mx-auto px-6">
         <div className="mb-20">
-          <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Case Studies</span>
+          <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Key Deliveries</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white max-w-2xl">
             Technical Excellence & <br/><span className="text-zinc-500">Commercial Delivery</span>
           </h2>

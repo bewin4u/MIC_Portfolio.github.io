@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
       setScrolled(window.scrollY > 20);
       
       // Update active section
-      const sections = ['hero', 'impact', 'writing', 'value', 'skills', 'contact'];
+      const sections = ['hero', 'impact', 'projects', 'writing', 'value', 'skills', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
   const navItems = [
     { id: 'hero', label: 'Home' },
     { id: 'impact', label: 'Impact' },
-    // 'Work' section removed as requested
+    { id: 'projects', label: 'Delivery' },
     { id: 'writing', label: 'Writing' },
     { id: 'value', label: 'Value' },
     { id: 'skills', label: 'Strengths' },

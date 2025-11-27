@@ -100,7 +100,7 @@ export const CORE_STRENGTHS = [
 ];
 
 export const CONTACT_INFO: ContactInfo = {
-  phone: "021 027 49937",
+  phone: "+642102749937",
   email: "bewin4u@gmail.com",
   location: "Christchurch, New Zealand"
 };

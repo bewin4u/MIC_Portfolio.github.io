@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Impact from './components/Impact';
-// Projects section removed
+import Projects from './components/Projects';
 import Writing from './components/Writing';
 import Philosophy from './components/Philosophy';
 import Skills from './components/Skills';
@@ -15,6 +15,7 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Impact />
+        <Projects />
         <Writing />
         <Philosophy />
         <Skills />
