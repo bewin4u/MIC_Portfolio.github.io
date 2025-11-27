@@ -18,22 +18,22 @@ export const COMMERCIAL_STATS: StatItem[] = [
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: "credit-score",
-    title: "AI Credit Score Engine",
-    role: "Technical Lead",
-    description: "Built the credit scoring engine using a gradient boosting model with CatBoost for fast delivery across mixed categorical and numeric risk signals. Pre-model preparation included standard EDA techniques: missing value handling, feature behavior profiling, correlation spread analysis, and outlier assessment.",
-    tags: ["CatBoost", "SHAP", "EDA", "Risk Modelling"],
+    id: "governance",
+    title: "AI Delivery & Programme Governance",
+    role: "Project Lead",
+    description: "Led the Contract-to-Cash - Revenue Assurance Automation transformation program in Spark NZ. Orchestrated multi-stream delivery for AI products and automation platforms, translating technical progress into business-friendly artefacts for SteerCo and vendor benefit reviews.",
+    tags: ["Revenue Assurance", "Transformation", "RAID Framework", "SLA Readiness"],
     metrics: [
-      "Designed score outputs to match established industry trust ranges (300-850)",
-      "High explainability via SHAP for risk contributions",
-      "Standard EDA techniques for robust model prep"
+      "Led Contract-to-Cash transformation program",
+      "Managed dependencies and delivery risks using RAID",
+      "Benefit realisation governance across streams"
     ]
   },
   {
     id: "fraud-risk",
     title: "Fraud & Credit Risk Intelligence",
     role: "Product Leader",
-    description: "Delivered fraud and bad-debt risk intelligence models and audit automation interfaces into production with a focus on explainability, traceability, and commercial value. Collaborated with platform, data, and architecture partners to ensure readiness assurance and business confidence.",
+    description: "Delivered fraud and bad-debt risk intelligence models and audit automation interfaces into production in Spark NZ, with a focus on explainability, traceability, and commercial value. Collaborated with platform, data, and architecture partners to ensure readiness assurance and business confidence.",
     tags: ["Audit Automation", "Risk Intelligence", "Governance", "Traceability"],
     metrics: [
       "Delivered audit automation interfaces into production",
@@ -42,15 +42,27 @@ export const PROJECTS: ProjectItem[] = [
     ]
   },
   {
-    id: "governance",
-    title: "AI Delivery & Programme Governance",
-    role: "Project Lead", // Updated from Programme Director
-    description: "Led multi-stream delivery orchestration for AI products and automation platforms. Translated technical progress into business-friendly artefacts for SteerCo and vendor benefit reviews.",
-    tags: ["RAID Framework", "SLA Readiness", "Benefit Realisation"],
+    id: "credit-score",
+    title: "AI Credit Score Engine",
+    role: "Technical Lead",
+    description: "Built the credit scoring engine in Spark NZ using a gradient boosting model with CatBoost for fast delivery across mixed categorical and numeric risk signals. Pre-model preparation included standard EDA techniques: missing value handling, feature behavior profiling, correlation spread analysis, and outlier assessment.",
+    tags: ["CatBoost", "SHAP", "EDA", "Risk Modelling"],
     metrics: [
-      "Managed dependencies and delivery risks using RAID",
-      "Ensured SLA-readiness and delivery assurance",
-      "Benefit realisation governance across streams"
+      "Designed score outputs to match established industry trust ranges (300-850)",
+      "High explainability via SHAP for risk contributions",
+      "Standard EDA techniques for robust model prep"
+    ]
+  },
+  {
+    id: "agentic-ai",
+    title: "Spark Agentic AI",
+    role: "Team Lead",
+    description: "Leading the Agentic AI team in Spark NZ, automating End-to-End (E2E) cumbersome manual processes by AI Agents. This initiative leverages autonomous agents to reduce friction and operational costs.",
+    tags: ["Agentic AI", "Process Automation", "Cost Reduction", "E2E Automation"],
+    metrics: [
+      "Driving $1.5M+ in projected annual OpEx savings",
+      "Automating complex manual workflows via AI Agents",
+      "Leading cross-functional agentic AI pods"
     ]
   }
 ];
@@ -93,7 +105,7 @@ export const CORE_STRENGTHS = [
   "Commercial Fluency (CapEx/OpEx)",
   "SLA & Governance Confidence",
   "ML Delivery (CatBoost + SHAP)",
-  "Cross Functional Team management", // Replaced Feature Behaviour Profiling
+  "Cross Functional Team management",
   "Risk Oversight (RAID)",
   "WOE/IV Scoring Layers",
   "Stakeholder Management"
