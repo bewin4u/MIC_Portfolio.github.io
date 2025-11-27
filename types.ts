@@ -4,6 +4,7 @@ export interface StatItem {
   value: string;
   label: string;
   description?: string;
+  icon: LucideIcon;
 }
 
 export interface ProjectItem {

@@ -1,5 +1,5 @@
 import { StatItem, ProjectItem, PhilosophyItem, ContactInfo, WritingItem } from './types';
-import { Lightbulb, Users, Target } from 'lucide-react';
+import { Lightbulb, Users, Target, TrendingUp, ShieldCheck, Archive, ShieldAlert } from 'lucide-react';
 
 export const HERO_DATA = {
   name: "Michael David Robinston",
@@ -10,10 +10,10 @@ export const HERO_DATA = {
 };
 
 export const COMMERCIAL_STATS: StatItem[] = [
-  { value: "$10M+", label: "Recovered", description: "Led AI-enabled Contract-to-Cash transformation" },
-  { value: "$1.5M", label: "Annual Savings", description: "Projected OpEx savings from FY26 via automation" },
-  { value: "$50M+", label: "Managed", description: "Directed reconciliation systems in enterprise finance" },
-  { value: "$5M+", label: "Leakage Closed", description: "Using fraud, audit, and compliance automation" },
+  { value: "$10M+", label: "Revenue Recovered", description: "Led AI-enabled Contract-to-Cash transformation", icon: TrendingUp },
+  { value: "$1.5M", label: "Projected Savings", description: "Projected OpEx savings from FY26 via automation", icon: ShieldCheck },
+  { value: "$50M+", label: "Assets Managed", description: "Directed reconciliation systems in enterprise finance", icon: Archive },
+  { value: "$5M+", label: "Risk Mitigated", description: "Using fraud, audit, and compliance automation", icon: ShieldAlert },
 ];
 
 export const PROJECTS: ProjectItem[] = [

@@ -3,6 +3,33 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Linkedin, MapPin } from 'lucide-react';
 import { HERO_DATA } from '../constants';
 
+const AgenticWorkflowAnimation = () => (
+  <motion.div
+    className="absolute inset-0 z-0"
+    animate={{ rotate: 360 }}
+    transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+  >
+    {[...Array(4)].map((_, i) => (
+      <motion.div
+        key={i}
+        className="absolute w-2.5 h-2.5 bg-primary/40 rounded-full"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: [0, 1, 0], opacity: [0, 1, 0] }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          delay: i * 2,
+          ease: 'easeInOut',
+        }}
+        style={{
+          top: `${50 + 45 * Math.sin((i * Math.PI) / 2)}%`,
+          left: `${50 + 45 * Math.cos((i * Math.PI) / 2)}%`,
+        }}
+      />
+    ))}
+  </motion.div>
+);
+
 const Hero: React.FC = () => {
   const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -89,8 +116,12 @@ const Hero: React.FC = () => {
           className="relative flex items-center justify-center lg:justify-end"
         >
            <div className="relative w-[350px] h-[400px] md:w-[450px] md:h-[500px]">
+              <AgenticWorkflowAnimation />
               {/* Main Image Container */}
-              <div className="absolute inset-0 bg-zinc-800 overflow-hidden border-4 border-zinc-700 rounded-3xl hexagon-clip">
+              <motion.div 
+                className="absolute inset-0 bg-zinc-800 overflow-hidden border-4 border-zinc-700 rounded-3xl hexagon-clip z-10"
+                whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+              >
                 {/* 
                    IMPORTANT: Ensure a file named 'hero.jpg' exists in the 'components' directory.
                 */}
@@ -100,17 +131,23 @@ const Hero: React.FC = () => {
                   className="w-full h-full object-cover filter hover:brightness-110 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent"></div>
-              </div>
+              </motion.div>
 
               {/* Floating Badge */}
               <motion.div 
                 initial={{ x: 20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 1 }}
-                className="absolute bottom-12 -left-8 bg-card border border-zinc-800 p-5 rounded-r-xl border-l-4 border-l-primary shadow-2xl z-30 max-w-[200px]"
+                className="absolute bottom-12 -left-8 z-20"
               >
-                <p className="font-bold text-3xl mb-0 text-white">10M+</p>
-                <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Revenue Recovered</p>
+                <motion.div
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                  className="bg-card border border-zinc-800 p-5 rounded-r-xl border-l-4 border-l-primary shadow-2xl max-w-[200px]"
+                >
+                  <p className="font-bold text-3xl mb-0 text-white">10M+</p>
+                  <p className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Revenue Recovered</p>
+                </motion.div>
               </motion.div>
            </div>
         </motion.div>

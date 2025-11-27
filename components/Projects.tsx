@@ -66,112 +66,135 @@ const Projects: React.FC = () => {
                   <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#333 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
                   
                   {/* Decorative Elements based on project type */}
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center justify-center p-8">
                     
-                    {/* Index 0: Governance (Formerly Visual 2) */}
+                    {/* Index 0: Governance (RAID Log Style) */}
                     {index === 0 && (
-                       <div className="w-3/4 flex flex-col gap-3">
-                          <div className="flex items-center gap-4 bg-zinc-800 p-3 rounded border-l-4 border-emerald-500">
-                             <div className="w-8 h-8 rounded-full border-2 border-zinc-600 flex items-center justify-center text-xs">A</div>
-                             <div className="flex-1 h-2 bg-zinc-700 rounded"></div>
-                             <div className="text-emerald-500 text-xs font-bold">ON TRACK</div>
+                       <div className="w-full flex flex-col gap-3 font-mono text-xs">
+                          <div className="grid grid-cols-12 gap-2 items-center text-zinc-500 px-3">
+                             <span className="col-span-2">ID</span>
+                             <span className="col-span-7">ITEM</span>
+                             <span className="col-span-3 text-right">STATUS</span>
                           </div>
-                          <div className="flex items-center gap-4 bg-zinc-800 p-3 rounded border-l-4 border-yellow-500">
-                             <div className="w-8 h-8 rounded-full border-2 border-zinc-600 flex items-center justify-center text-xs">B</div>
-                             <div className="flex-1 h-2 bg-zinc-700 rounded"></div>
-                             <div className="text-yellow-500 text-xs font-bold">RISK</div>
-                          </div>
-                          <div className="flex items-center gap-4 bg-zinc-800 p-3 rounded border-l-4 border-primary">
-                             <div className="w-8 h-8 rounded-full border-2 border-zinc-600 flex items-center justify-center text-xs">C</div>
-                             <div className="flex-1 h-2 bg-zinc-700 rounded"></div>
-                             <div className="text-primary text-xs font-bold">REVIEW</div>
+                          <div className="flex flex-col gap-2">
+                            <div className="grid grid-cols-12 gap-2 items-center bg-zinc-800/50 p-3 rounded border-l-4 border-emerald-500">
+                               <div className="col-span-2 text-zinc-400">#7A3D</div>
+                               <div className="col-span-7 h-2 bg-zinc-700 rounded"></div>
+                               <div className="col-span-3 text-right text-emerald-500 font-bold">ON TRACK</div>
+                            </div>
+                            <div className="grid grid-cols-12 gap-2 items-center bg-zinc-800/50 p-3 rounded border-l-4 border-yellow-500">
+                               <div className="col-span-2 text-zinc-400">#B4C1</div>
+                               <div className="col-span-7 h-2 bg-zinc-700 rounded"></div>
+                               <div className="col-span-3 text-right text-yellow-500 font-bold">RISK</div>
+                            </div>
+                            <div className="grid grid-cols-12 gap-2 items-center bg-zinc-800/50 p-3 rounded border-l-4 border-primary">
+                               <div className="col-span-2 text-zinc-400">#E8F9</div>
+                               <div className="col-span-7 h-2 bg-zinc-700 rounded"></div>
+                               <div className="col-span-3 text-right text-primary font-bold">REVIEW</div>
+                            </div>
                           </div>
                        </div>
                     )}
 
-                    {/* Index 1: Fraud (Formerly Visual 1 - Kept same) */}
+                    {/* Index 1: Fraud (Risk Grid) */}
                     {index === 1 && (
-                       <div className="grid grid-cols-2 gap-4 w-3/4">
-                          <div className="bg-zinc-800/50 p-4 rounded-lg border border-red-500/20">
-                             <div className="h-8 w-8 bg-red-500/20 rounded-full flex items-center justify-center mb-2">!</div>
-                             <div className="h-2 w-16 bg-zinc-600 rounded mb-1"></div>
+                       <div className="grid grid-cols-2 gap-4 w-full h-full">
+                          <motion.div whileHover={{ scale: 1.05 }} className="bg-zinc-800/50 p-4 rounded-lg border border-red-500/30 flex flex-col justify-between transition-colors hover:bg-red-500/10">
+                             <div className="flex justify-between items-center"><span className="font-mono text-xs text-red-400">HIGH RISK</span><motion.div animate={{ scale: [1, 1.2, 1]}} transition={{duration: 1, repeat: Infinity}} className="w-2 h-2 rounded-full bg-red-500"></motion.div></div>
+                             <div className="h-2 w-16 bg-zinc-600 rounded mb-1 mt-auto"></div>
                              <div className="h-2 w-10 bg-zinc-700 rounded"></div>
-                          </div>
-                          <div className="bg-zinc-800/50 p-4 rounded-lg border border-primary/20">
-                             <div className="h-8 w-8 bg-primary/20 rounded-full flex items-center justify-center mb-2 text-primary">✓</div>
-                             <div className="h-2 w-16 bg-zinc-600 rounded mb-1"></div>
+                          </motion.div>
+                          <motion.div whileHover={{ scale: 1.05 }} className="bg-zinc-800/50 p-4 rounded-lg border border-primary/30 flex flex-col justify-between transition-colors hover:bg-primary/10">
+                            <div className="flex justify-between items-center"><span className="font-mono text-xs text-primary">VERIFIED</span><div className="w-2 h-2 rounded-full bg-primary"></div></div>
+                             <div className="h-2 w-16 bg-zinc-600 rounded mb-1 mt-auto"></div>
                              <div className="h-2 w-10 bg-zinc-700 rounded"></div>
-                          </div>
-                          <div className="col-span-2 bg-zinc-800/50 p-4 rounded-lg border border-zinc-700">
-                             <div className="flex justify-between mb-2">
-                                <div className="h-2 w-20 bg-zinc-600 rounded"></div>
-                                <div className="h-2 w-4 bg-primary rounded"></div>
-                             </div>
-                             <div className="w-full bg-zinc-900 h-12 rounded relative overflow-hidden">
-                                <div className="absolute bottom-0 left-0 w-full h-8 bg-primary/10"></div>
-                                <div className="absolute bottom-0 left-4 w-2 h-6 bg-primary"></div>
-                                <div className="absolute bottom-0 left-8 w-2 h-4 bg-primary/50"></div>
-                                <div className="absolute bottom-0 left-12 w-2 h-8 bg-primary"></div>
+                          </motion.div>
+                          <div className="col-span-2 bg-zinc-800/50 p-4 rounded-lg border border-zinc-700 flex flex-col justify-between">
+                            <span className="font-mono text-xs text-zinc-400">AUDIT TRAIL</span>
+                             <div className="w-full bg-zinc-900 h-16 rounded relative overflow-hidden mt-2">
+                                <div className="absolute bottom-0 left-0 w-full h-12 bg-primary/10"></div>
+                                <motion.div className="absolute bottom-0 left-4 w-1 h-full bg-primary" initial={{height: 0}} whileInView={{height: '60%'}} viewport={{once: true}} transition={{delay: 0.2}}></motion.div>
+                                <motion.div className="absolute bottom-0 left-8 w-1 h-full bg-primary/50" initial={{height: 0}} whileInView={{height: '40%'}} viewport={{once: true}} transition={{delay: 0.3}}></motion.div>
+                                <motion.div className="absolute bottom-0 left-12 w-1 h-full bg-primary" initial={{height: 0}} whileInView={{height: '80%'}} viewport={{once: true}} transition={{delay: 0.4}}></motion.div>
                              </div>
                           </div>
                        </div>
                     )}
 
-                    {/* Index 2: Credit Score (Formerly Visual 0) */}
+                    {/* Index 2: Credit Score (Credit Report) */}
                     {index === 2 && (
-                      <div className="w-3/4 h-3/4 bg-zinc-950 rounded-xl border border-zinc-700 p-6 flex flex-col gap-4 relative overflow-hidden">
-                        <div className="flex justify-between items-end border-b border-zinc-800 pb-4">
+                      <div className="w-full h-full bg-zinc-950 rounded-xl border border-zinc-700 p-6 flex flex-col gap-4 relative overflow-hidden">
+                        <div className="flex justify-between items-center border-b border-zinc-800 pb-2">
                            <div className="space-y-1">
+                             <h4 className="font-bold text-primary">CREDIT REPORT</h4>
                              <div className="h-2 w-24 bg-zinc-700 rounded"></div>
-                             <div className="h-4 w-12 bg-primary rounded"></div>
                            </div>
                            <div className="text-right">
-                             <span className="text-xs text-zinc-500">Score</span>
-                             <p className="text-2xl font-bold text-white">742</p>
+                             <span className="text-xs text-zinc-500 font-mono">SCORE</span>
+                             <p className="text-4xl font-bold font-mono text-white">742</p>
                            </div>
                         </div>
-                        <div className="space-y-2">
-                          <div className="flex gap-2 items-center"><div className="w-full bg-zinc-800 h-2 rounded-full overflow-hidden"><div className="w-[70%] bg-emerald-500 h-full"></div></div></div>
-                          <div className="flex gap-2 items-center"><div className="w-full bg-zinc-800 h-2 rounded-full overflow-hidden"><div className="w-[40%] bg-green-300 h-full"></div></div></div>
-                          <div className="flex gap-2 items-center"><div className="w-full bg-zinc-800 h-2 rounded-full overflow-hidden"><div className="w-[90%] bg-primary h-full"></div></div></div>
+                        <div className="space-y-3 flex-1">
+                          {[70, 40, 90].map((w, i) => (
+                             <div key={i} className="flex gap-2 items-center text-xs font-mono text-zinc-500">
+                               <span className="w-20">FACTOR {i+1}</span>
+                               <div className="w-full bg-zinc-800 h-3 rounded-full overflow-hidden">
+                                 <motion.div className="bg-primary h-full" initial={{width: 0}} whileInView={{width: `${w}%`}} viewport={{once:true}} transition={{delay: i * 0.2}}></motion.div>
+                               </div>
+                             </div>
+                          ))}
                         </div>
-                        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent"></div>
+                        <div className="text-center text-xs text-emerald-400 font-mono p-2 bg-emerald-900/50 rounded border border-emerald-500/30">
+                          STATUS: LOW RISK - VERIFIED
+                        </div>
+                        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-dark to-transparent"></div>
                       </div>
                     )}
 
-                    {/* Index 3: Agentic AI (New Visual) */}
+                    {/* Index 3: Agentic AI (Animated) */}
                     {index === 3 && (
-                      <div className="relative w-3/4 h-3/4 flex items-center justify-center">
+                      <div className="relative w-full h-full flex items-center justify-center">
                         {/* Central Hub */}
-                        <div className="absolute w-16 h-16 bg-primary/20 rounded-full border border-primary flex items-center justify-center z-20 shadow-[0_0_30px_rgba(74,222,128,0.3)]">
-                           <div className="w-8 h-8 bg-primary rounded-full animate-pulse"></div>
-                        </div>
+                        <motion.div 
+                          className="absolute w-16 h-16 bg-primary/20 rounded-full border border-primary flex items-center justify-center z-20 shadow-[0_0_30px_rgba(74,222,128,0.3)]"
+                          animate={{ scale: [1, 1.1, 1] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                        >
+                           <div className="w-8 h-8 bg-primary rounded-full"></div>
+                        </motion.div>
                         
                         {/* Satellite Nodes */}
-                        <div className="absolute w-full h-full animate-[spin_10s_linear_infinite]">
-                           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-zinc-800 border border-zinc-600 rounded-lg flex items-center justify-center">
-                             <div className="w-1 h-4 bg-zinc-500"></div>
-                           </div>
-                           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-zinc-800 border border-zinc-600 rounded-lg flex items-center justify-center">
-                             <div className="w-4 h-1 bg-zinc-500"></div>
-                           </div>
-                           <div className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-zinc-800 border border-zinc-600 rounded-lg flex items-center justify-center">
-                             <div className="w-2 h-2 rounded-full bg-zinc-500"></div>
-                           </div>
-                           <div className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-zinc-800 border border-zinc-600 rounded-lg flex items-center justify-center">
-                             <div className="w-2 h-2 bg-zinc-500 rotate-45"></div>
-                           </div>
+                        <div className="absolute w-full h-full animate-[spin_20s_linear_infinite]">
+                          {[...Array(4)].map((_, i) => (
+                            <motion.div
+                              key={i}
+                              className="absolute w-8 h-8 bg-zinc-800 border border-zinc-600 rounded-lg flex items-center justify-center"
+                              style={{
+                                top: `calc(50% - 1rem + ${Math.sin(i * Math.PI / 2) * 40}%)`,
+                                left: `calc(50% - 1rem + ${Math.cos(i * Math.PI / 2) * 40}%)`,
+                              }}
+                              animate={{ opacity: [0.5, 1, 0.5] }}
+                              transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
+                            >
+                             <div className="w-2 h-2 bg-zinc-500 rounded-full"></div>
+                            </motion.div>
+                          ))}
                         </div>
 
                         {/* Connection Lines */}
                         <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30">
-                          <line x1="50%" y1="50%" x2="50%" y2="10%" stroke="currentColor" className="text-primary" strokeDasharray="4 4" />
-                          <line x1="50%" y1="50%" x2="50%" y2="90%" stroke="currentColor" className="text-primary" strokeDasharray="4 4" />
-                          <line x1="50%" y1="50%" x2="10%" y2="50%" stroke="currentColor" className="text-primary" strokeDasharray="4 4" />
-                          <line x1="50%" y1="50%" x2="90%" y2="50%" stroke="currentColor" className="text-primary" strokeDasharray="4 4" />
+                          {[...Array(4)].map((_, i) => (
+                            <line 
+                              key={i}
+                              x1="50%" y1="50%" 
+                              x2={`calc(50% + ${Math.cos(i * Math.PI / 2) * 40}%)`}
+                              y2={`calc(50% + ${Math.sin(i * Math.PI / 2) * 40}%)`}
+                              stroke="currentColor" className="text-primary" strokeDasharray="4 4" 
+                            />
+                          ))}
                         </svg>
 
-                        <div className="absolute -bottom-8 bg-card border border-zinc-700 px-3 py-1 rounded-full text-xs font-mono text-primary">
+                        <div className="absolute -bottom-0 bg-card border border-zinc-700 px-3 py-1 rounded-full text-xs font-mono text-primary">
                           AI AGENTS ACTIVE
                         </div>
                       </div>
