@@ -90,7 +90,7 @@ export const PHILOSOPHY: PhilosophyItem[] = [
   },
   {
     title: "The AI Pod Model",
-    content: "I design AI delivery around small cross-functional pods (3 - 5 people) where each pod owns a tight mission, value metric, and fast iteration cycle Also I have led large AI Automation squads of size 10 - 15 people.",
+    content: "I design AI delivery around small cross-functional pods (3 - 5 people) where each pod owns a tight mission, value metric, and fast iteration cycle. Also I have led large AI Automation squads of size 10 - 15 people.",
     icon: Users
   },
   {
