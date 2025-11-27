@@ -53,7 +53,7 @@ const Philosophy: React.FC = () => {
             <div className="relative z-10 rounded-2xl overflow-hidden border border-zinc-800 bg-card shadow-2xl p-2">
                <div className="rounded-xl overflow-hidden relative">
                  <img 
-                   src="https://github.com/bewin4u/MIC_Portfolio.github.io/blob/641733ad58a03b9dd6fbe14a0ba68de88c8dca19/philosophy.jpg?raw=true"
+                   src="https://github.com/bewin4u/MIC_Portfolio.github.io/blob/6123de5aa0e180bc5f3f3acfb6bbc6cb68fadf2e/philosophy.jpg?raw=true"
                    alt="Michael Presentation" 
                    className="w-full h-auto object-cover filter hover:brightness-110 transition-all duration-700"
                  />
