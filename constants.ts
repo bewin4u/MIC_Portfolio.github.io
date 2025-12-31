@@ -3,7 +3,7 @@ import { Lightbulb, Users, Target, TrendingUp, ShieldCheck, Archive, ShieldAlert
 
 export const HERO_DATA = {
   name: "Michael David Robinston",
-  role: "AI Delivery & Product Leader",
+  role: "Enterprise Data, AI & Product Leader",
   location: "Christchurch, New Zealand",
   tagline: "Bridging the gap between strategic value and technical excellence.",
   bio: "I lead and deliver production AI and automation platforms, focusing on measurable commercial outcomes that business and technical stakeholders can verify. My background spans telecom transformation, banking accountability, and sales and marketing fluency, giving me a delivery style that balances strategic value, cost ownership, and technical excellence that serves business goals.",
