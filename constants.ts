@@ -104,10 +104,10 @@ export const CORE_STRENGTHS = [
   "AI Delivery Orchestration",
   "Commercial Fluency (CapEx/OpEx)",
   "SLA & Governance Confidence",
-  "ML Delivery (CatBoost + SHAP)",
+  "Enterprise Data Strategy & Operating Model",
   "Cross Functional Team management",
   "Risk Oversight (RAID)",
-  "WOE/IV Scoring Layers",
+  "Advanced Analytics & Explainable AI",
   "Stakeholder Management"
 ];
 
