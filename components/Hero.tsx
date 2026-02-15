@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Linkedin, MapPin } from 'lucide-react';
 import { HERO_DATA } from '../constants';
+import heroImage from '../hero.jpg';
 
 const AgenticWorkflowAnimation = () => (
   <motion.div
@@ -123,7 +124,7 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
               >
                 <img 
-                  src="https://github.com/bewin4u/MIC_Portfolio.github.io/blob/fd08f6636a3af7f87583a5128605179e5cfd2c8a/hero.jpg?raw=true"
+                  src={heroImage}
                   alt="Michael David Robinston"
                   className="w-full h-full object-cover filter hover:brightness-110 transition-all duration-700"
                 />
