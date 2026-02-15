@@ -126,7 +126,7 @@ const Hero: React.FC = () => {
                 <img 
                   src={heroImage}
                   alt="Michael David Robinston"
-                  className="w-full h-full object-cover filter hover:brightness-110 transition-all duration-700"
+                  className="w-full h-full object-cover filter grayscale hover:brightness-110 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent"></div>
               </motion.div>
